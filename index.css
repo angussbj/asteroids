@@ -1,0 +1,88 @@
+body {
+    background-color: #121416;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FF9922;
+    font-family: sans-serif;
+}
+
+.ship {
+    position: absolute;
+    border-color: transparent;
+    border-width: 50px;
+    border-top-width: 0;
+    border-right-width: 20px;
+    border-left-width: 20px;
+    border-bottom-color: #CCCCCC;
+    border-style: solid
+}
+
+.asteroid {
+    position: absolute;
+    border-radius: 50%;
+    background-color: #666;
+}
+
+#game-over {
+    visibility: hidden;
+    z-index: 9
+}
+
+@keyframes explosion {
+    0% {
+        background-color: white;
+        box-shadow: 0 0 0 0 white;
+    }
+
+    25% {
+        background-color: yellow;
+        box-shadow: 0 0 20px 20px yellow;
+    }
+
+    50% {
+        background-color: orange;
+        box-shadow: 0 0 40px 40px orange;
+    }
+
+    75% {
+        background-color: darkred;
+        box-shadow: 0 0 80px 80px darkred;
+    }
+
+    100% {
+        background-color: transparent;
+        box-shadow: 0 0 90px 90px transparent;
+    }
+}
+
+.explosion {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    z-index: 10;
+    border-radius: 50%;
+    animation-name: explosion;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+}
+
+@keyframes dust {
+    from {
+        background-color: #666;
+        box-shadow: 0 0 0 0 #666;
+    }
+
+    to {
+        background-color: #121416;
+        box-shadow: 0 0 20px 20px #121416;
+    }
+}
+
+.dust {
+    position: absolute;
+    border-radius: 50%;
+    animation-name: dust;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+}

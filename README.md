@@ -1,0 +1,1 @@
+A basic asteroids game where all the controls are direct thruster controls, hence control acceleration not velocity, making the ship quite challenging to control.
